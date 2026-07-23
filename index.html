@@ -1,0 +1,28 @@
+---
+layout: default
+title: Inicio
+---
+<section class="hero">
+  <h1>Bienvenido a el gordo games. El mejor proveedor de juegos.</h1>
+  <div class="trail">
+    <span class="trail-stop">Categoria 1</span>
+    <span class="trail-dots"></span>
+    <span class="trail-stop">Categoria 2</span>
+    <span class="trail-dots"></span>
+    <span class="trail-stop">Categoria 3</span>
+  </div>
+</section>
+
+<div class="ad-slot">[ espacio de anuncio ]</div>
+
+<ul class="waypoints">
+  {% for post in site.posts %}
+  <li>
+    <a class="waypoint" href="{{ post.url | relative_url }}">
+      <span class="tag">{{ post.category | default: "guía" }}</span>
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.excerpt | strip_html | truncatewords: 24 }}</p>
+    </a>
+  </li>
+  {% endfor %}
+</ul>

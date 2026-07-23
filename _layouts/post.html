@@ -1,0 +1,14 @@
+---
+layout: default
+---
+<article class="post">
+  <span class="tag">{{ page.category | default: "guía" }}</span>
+  <h1>{{ page.title }}</h1>
+  <div class="meta">{{ page.date | date: "%-d de %B, %Y" }}</div>
+
+  {{ content }}
+
+  <!-- Espacio de anuncio dentro del artículo. Sustituye por tu bloque real de AdSense
+       una vez tengas la cuenta aprobada (Anuncios → Por unidad de anuncio → código). -->
+  <div class="ad-slot">[ espacio de anuncio ]</div>
+</article>

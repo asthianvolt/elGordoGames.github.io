@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+  <!--
+    ADSENSE: descomenta estas dos líneas cuando tu cuenta de AdSense
+    esté aprobada, y reemplaza el client id en _config.yml
+  -->
+  <!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client={{ site.adsense_client }}" crossorigin="anonymous"></script> -->
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="{{ '/' | relative_url }}">El Atajo<span class="dot">.</span></a>
+      <nav class="site-nav">
+        <a href="{{ '/' | relative_url }}">Guías</a>
+        <a href="{{ '/videos/' | relative_url }}">Videos</a>
+        <a href="{{ site.youtube_channel }}">Canal</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      El Atajo — guías simples para encontrar la herramienta correcta, sin vueltas. &copy; {{ 'now' | date: "%Y" }}
+    </div>
+  </footer>
+
+</body>
+</html>

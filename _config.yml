@@ -1,0 +1,25 @@
+title: "El Atajo"
+description: "La ruta directa a la herramienta que necesitas, explicada en cristiano."
+baseurl: ""
+url: ""
+
+# --- Reemplaza esto con tus IDs reales cuando los tengas ---
+adsense_client: "ca-pub-XXXXXXXXXXXXXXXX"   # tu ID de Google AdSense
+youtube_channel: "https://www.youtube.com/@tucanal"  # link a tu canal
+
+markdown: kramdown
+permalink: /:categories/:title/
+
+collections:
+  posts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+exclude:
+  - README.md
