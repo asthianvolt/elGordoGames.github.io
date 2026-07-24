@@ -5,10 +5,23 @@ layout: default
   <span class="tag">{{ page.category | default: "guía" }}</span>
   <h1>{{ page.title }}</h1>
   <div class="meta">{{ page.date | date: "%-d de %B, %Y" }}</div>
-
+ 
   {{ content }}
-
-  <!-- Espacio de anuncio dentro del artículo. Sustituye por tu bloque real de AdSense
-       una vez tengas la cuenta aprobada (Anuncios → Por unidad de anuncio → código). -->
-  <div class="ad-slot">[ espacio de anuncio ]</div>
+ 
+  <!-- Zona HilltopAds: MultiTag Banner 300x250 -->
+  <div class="ad-block">
+    <script>
+    (function(gen){
+    var d = document,
+        s = d.createElement('script'),
+        l = d.scripts[d.scripts.length - 1];
+    s.settings = gen || {};
+    s.src = "\/\/massivesalad.com\/bnXVVXs.d\/GPlT0uYrW\/ch\/-eHmI9fu\/ZcUwlKkgP-TUcwyTNfT\/IZxFMPjJUEtmN\/z\/ID1dMdjWEuywOQQn";
+    s.async = true;
+    s.referrerPolicy = 'no-referrer-when-downgrade';
+    l.parentNode.insertBefore(s, l);
+    })({})
+    </script>
+  </div>
 </article>
+ 
